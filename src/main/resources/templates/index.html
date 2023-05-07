@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html lang="us" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Currency Converter</title>
+    <link rel="shortcut icon" href="/static/img/money-mouth-face-120.png">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <!-- ===== HEADER ===== -->
+    <header>
+        <a href="/">
+            <div class="img-container">
+                <img src="/static/img/money-mouth-face-120.png">
+            </div>
+            <h1>CURRENCY CONVERTER</h1>
+        </a>
+    </header>
+
+    <!-- ===== MAIN ===== -->
+    <main>
+        <button id="dark-mode-switch" class="dark-mode-switch" type="button" onclick="switchDarkMode()">🌝</button>
+
+        <div class="container">
+            <h2 id="converter-title">GBP to PLN Converter</h2>
+            <div class="converter">
+                <select id="currency-selection-left" class="currency-selection">
+                    <option selected value="gbp">GBP</option>
+                    <option value="pln">PLN</option>
+                    <option value="usd">USD</option>
+                </select>
+                <input id="currency-input-left" class="currency-input" type="number" min="0" step="any"
+                    placeholder="Enter a value...">
+
+                <label class="arrows">⇄</label>
+
+                <select id="currency-selection-right" class="currency-selection">
+                    <option value="gbp">GBP</option>
+                    <option selected value="pln">PLN</option>
+                    <option value="usd">USD</option>
+                </select>
+                <input id="currency-input-right" class="currency-input" type="number" min="0" step="any"
+                    placeholder="Enter a value...">
+            </div>
+
+            <div class="converter-information">
+                <div class="exchange-rate-container">
+                    <p>Current rate:</p>
+                    <p id="exchange-rate">...</p>
+                </div>
+                <p class="transfer-fee">(Transfer fee not included)</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p class="copyright">Copyright &copy; 2023 Ptak Filip</p>
+    </footer>
+
+    <!-- ===== SCRIPT ===== -->
+    <script src="/static/js/main.js"></script>
+</body>
+
+</html>
